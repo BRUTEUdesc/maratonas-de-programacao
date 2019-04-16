@@ -1,0 +1,184 @@
+[user]
+username=team01
+userfullname=[UDESC]Noollab
+userpassword=654321
+
+username=team02
+userfullname=[UDESC]Balde Samurai Bangueado
+userpassword=yoda
+
+username=team03
+userfullname=[EX-UDESC/UNICAMP]Marlon
+userpassword=5157741
+
+username=team04
+userfullname=[UDESC]Potato
+userpassword=gip
+
+username=team05
+userfullname=[UDESC]POG
+userpassword=753flm
+
+username=team06
+userfullname=[UDESC]The Spanish Inquisition
+userpassword=luna
+
+username=team07
+userfullname=[UDESC]Sem Nome
+userpassword=hallelujah
+
+username=team08
+userfullname=[UDESC]Checkmate
+userpassword=123456
+
+username=team09
+userfullname=[UDESC]Overclock
+userpassword=Overclock
+
+username=team10
+userfullname=[IFC Rio do Sul]IFC Gogoboys
+userpassword=bcc2011ifc
+
+username=team11
+userfullname=[UDESC]The Powerpuff Pandas
+userpassword=pandaww
+
+username=team12
+userfullname=[UFOP]Ours is the Fury
+userpassword=123456
+
+username=team13
+userfullname=[UFOP]Growing Strong
+userpassword=123456
+
+username=team14
+userfullname=[UDESC]Jolly Roger
+userpassword=bdes04
+
+username=team15
+userfullname=[Unoesc]TRESTABAUM
+userpassword=marciano123
+
+username=team16
+userfullname=[UDESC]Patrões
+userpassword=huekaiser#1
+
+username=team17
+userfullname=[Udesc Joinville]yoyomixoxô
+userpassword=m@f@s@
+
+username=team18
+userfullname=[UDESC- CCT]Equipe Rocket
+userpassword=ultrasecreta
+
+username=team19
+userfullname=[UDESC]Girls 
+userpassword=lilica
+
+username=team20
+userfullname=[UDESC-CCT]sopa pa nois
+userpassword=rec123
+
+username=team21
+userfullname=[IFC-Rio do Sul]Amazing Horse
+userpassword=123456789
+
+username=team22
+userfullname=[URI]100 Criatividade
+userpassword=mangojata
+
+username=team23
+userfullname=[UFG]DOTA!
+userpassword=Qwer123
+
+username=team24
+userfullname=[UNOESC]Alessandro
+userpassword=030393five
+
+username=team25
+userfullname=[UDESC]C Cobra
+userpassword=ccobra
+
+username=team26
+userfullname=[UDESC]Debug is on the Table
+userpassword=gubed
+
+username=team27
+userfullname=[UFG]Monkeys
+userpassword=naosei01
+
+username=team28
+userfullname=[UDESC]#404
+userpassword=112358
+
+username=team29
+userfullname=[UFPI]José Luís R. Terceiro
+userpassword=123456
+
+username=team30
+userfullname=[UFPI]Leleks do Forró
+userpassword=123456
+
+username=team31
+userfullname=[UFPI]Forrozão Os Leleks
+userpassword=123456
+
+username=team32
+userfullname=[UDESC - CCT]P4F
+userpassword=udescao
+
+username=team33
+userfullname=[UDESC]Fiorese
+userpassword=ele2013
+
+username=team34
+userfullname=[UDESC - CCT]NoobNator 2.13c beta
+userpassword=1234567
+
+username=team35
+userfullname=[ITA]Pembita
+userpassword=medodapipoca
+
+username=team36
+userfullname=[UFPR]Hyrule Fields
+userpassword=123mudar
+
+username=team37
+userfullname=[UDESC]Pokerface
+userpassword=42
+
+username=team38
+userfullname=[UDESC]Prog. Orientada a Tapa 
+userpassword=deiwysalcides
+
+username=team39
+userfullname=[IME USP]Centozebra Impalatriz
+userpassword=123456
+
+username=team40
+userfullname=[POLI-USP]20% cooler
+userpassword=derpy
+
+username=team41
+userfullname=[POLI-USP]Cadê o Baiano ?
+userpassword=minerva
+
+username=team42
+userfullname=[IME-USP]Tsebayoth
+userpassword=deusefiel
+
+username=team43
+userfullname=[ufgh]select * from users;
+userpassword=159
+
+username=team44
+userfullname=[UFG]Opa! Passando...
+userpassword=opa01
+
+username=team45
+userfullname=[UFO]Tabajara Style
+userpassword=101252
+
+username=team46
+userfullname=[UDESC]Final Fantasy
+userpassword=abcd1234

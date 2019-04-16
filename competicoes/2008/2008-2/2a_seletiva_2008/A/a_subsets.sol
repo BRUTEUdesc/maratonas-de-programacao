@@ -1,0 +1,11 @@
+curse               rescue              yes
+curse               cure                no
+a                   a                   yes
+a                   b                   no
+aaaaaaaaaaaaaaaaaaa aaaaaaaaaaaaaaaaaaa yes
+aaaaaaaaaaaaaaaaaaa a                   yes
+aaaaaaaaaaaaaaaaaaa aaaaaaaaaaaaaaaaaab no
+abcdefghijklmnopqrs srqponmlkjihgfedcba yes
+abcdefghijklmnopqrs srqponmlkjihgfedcbb no
+aaaabbbbccccddddeee edcba               yes
+aaaabbbbccccddddeee edcb                no

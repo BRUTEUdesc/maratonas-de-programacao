@@ -1,0 +1,48 @@
+Teste 1
+1048575
+
+Teste 2
+524287
+
+Teste 3
+262143
+
+Teste 4
+131071
+
+Teste 5
+65535
+
+Teste 6
+1023
+
+Teste 7
+2047
+
+Teste 8
+4095
+
+Teste 9
+8191
+
+Teste 10
+16383
+
+Teste 11
+32767
+
+Teste 12
+2097151
+
+Teste 13
+4194303
+
+Teste 14
+8388607
+
+Teste 15
+16777215
+
+Teste 16
+33554431
+

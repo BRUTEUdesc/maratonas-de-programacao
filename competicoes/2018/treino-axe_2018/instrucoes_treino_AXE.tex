@@ -1,0 +1,246 @@
+\documentclass[12pt,oneside]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[portuges]{babel}
+\usepackage[dvips]{graphicx}
+\usepackage{wrapfig}
+\usepackage{epsfig}
+\usepackage{fancyhdr}
+\usepackage{multicol}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=blue]{hyperref}
+%%\usepackage{nomencl}    % glossario
+%\usepackage{amssymb,comment,listings}
+\usepackage{subcaption}
+\usepackage{color}
+\usepackage{tikz}
+\usepackage{verbatim}
+\usepackage{tabularx}
+\usetikzlibrary{calc}
+\usetikzlibrary{decorations.pathreplacing}
+\usepackage{amsmath}
+
+%=======================================================================
+
+%\hyphenation{}
+\paperheight    297mm
+\paperwidth     210mm
+\voffset         -15mm
+\headheight      15pt %% tamanho de letra
+\headsep         5mm  %% para o início do texto
+\topmargin      005.0mm
+\oddsidemargin  -2.0mm
+\evensidemargin -2.0mm
+\textwidth      167.0mm
+\textheight     250.0mm
+\footskip       10.0mm 
+
+%\makeglossary
+%\makenomenclature
+%\makeindex
+
+\author{Treino Multi-Nível da UDESC e IFMS--Aquidauana -- 2018}
+\title{Treino Multi-Nível}
+\date{18 de agosto de 2018}
+
+\makeatletter
+\setlength{\@fptop}{0pt}
+\makeatother
+
+\begin{document}
+
+
+\begin{center}
+\textbf{\Huge Caderno de Instruções \\ Treino \textit{Overlap}} \\
+\vspace{0.2cm}
+\textbf{\textsc{\large  Rumo à Salvador}} \\
+\vspace{0.5cm}
+\textbf{\textsc{\large UDESC--Joinville e IFMS--Aquidauana}} \\
+\vspace{0.5cm}
+\textbf{Servidor BOCA (Arena Joinville):}\\
+\texttt{\large \url{http://200.19.107.67/boca/}} \\
+\vspace{1.0cm}
+\begin{figure}[h!]
+\centering
+ \includegraphics[scale=0.5]{figuras/capa.pdf}
+\end{figure}
+\vspace{1.0cm}
+\textbf{Organização e Realização:}\\
+\vspace{0.4cm}
+{\small Claudio Cesar de Sá (coordenação geral), Peter Laureano Brendel (coordenação técnica) e  \textit{kernel} do 
+grupo de maratonistas da UDESC
+}
+%%%\textit{\{alexandre,rosso,claudio\} at joinville dot udesc dot br}}\\
+\end{center}
+
+
+\begin{center}
+\vfill
+\textbf{Patrocinador 2018: {\sf Linx  e TOTVS}}
+\end{center}
+
+
+\newpage
+\section{Sistema de balões desta prova é diferente}
+
+
+\begin{itemize}
+\itemsep -1pt
+
+\item O objetivo deste treino é mandar o nosso axé ao \emph{Travelling
+Balloonsmen} lá em Salvador-BA, dia 10/novembro -- sábado.
+
+\item O nome deste treino é \emph{overlap} ou  \emph{multi-nível} pelo fato dos problemas serem ranqueados. Assim, a dificuldade dos problemas são proporcionais a sua pontuação.
+
+\item Deste modo, tornamos a prova em 3 categorias de maratonistas: iniciantes, intermediários e avançados. Logo, os 3 pelotões são importantes, mas, há problemas específicos a cada pelotão!
+
+\item \textbf{O sistema de vencedor se mantém: número de balões}! Um pouco cruel ... mas é como o nosso representante na Sul-americana vai se defrontar em Salvador -- BA.
+
+\end{itemize}
+
+Categoria dos Times (veja onde voce se \emph{encaixa}):
+
+\begin{description}
+\itemsep -1pt
+
+\item [Iniciantes (times da série C):] seguem os problemas que valem de  3 e 10 pontos. Seguem do \textbf{A} até o \textbf{H}.  Total: 6 problemas.
+
+\item [Intermediário  (times da série B):]  seguem os problemas que valem de  10 e 30 pontos.  Seguem do \textbf{E} até o \textbf{L}. Total: 8 problemas.
+
+\item [Avançado  (times da série A):]  seguem os problemas que valem de  30 e 100 pontos.  Seguem do \textbf{I} até o \textbf{O}. Total: 7 problemas.
+
+\end{description}
+
+Logo, veja qual é o seu \emph{pelotão} e vá enfrente!
+
+ 
+
+
+
+\begin{center}
+\textcolor{red}{\rule{0.7\paperwidth}{2pt}}\\
+
+\textbf{\textcolor{red}{Atenção quanto aos nomes e números dos problemas!!!}}\\
+\textcolor{red}{\rule{0.7\paperwidth}{2pt}}\\
+\end{center}
+
+\begin{itemize}
+
+\item Por ser uma prova sem soluções locais, o tempo limite estão superestimados!
+
+\item Não haverá \emph{clarifications}!
+Depois liberamos os I/Os e a fonte desta prova.
+
+\end{itemize}
+
+\newpage
+\section{Lembretes:}
+
+\begin{small}
+\begin{itemize}
+\itemsep -3pt
+
+ \item Aos {\em javaneiros}: {\bf o nome da classe deve ser o mesmo nome do arquivo a ser submetido}.     Ex: {\bf classe petrus}, nome do arquivo {\bf petrus.java}. Na próxima página segue a relação dos problemas x classes;
+
+\item Exemplo de leitura de entradas que funcionam:
+\begin{verbatim}
+Java: (import java.util.Scanner)
+Scanner in = new Scanner(System.in); 
+ou
+Scanner stdin = new Scanner(new BufferedReader(new InputStreamReader(System.in)));
+
+C: (#include <stdio.h>)
+int integer1; scanf("%d", &integer1);
+
+C++: (#include <iostream>)
+int integer1; std::cin >> integer1;
+\end{verbatim}
+
+Exemplo de saída de entradas:
+\begin{verbatim}
+Java: System.out.format("%d %d\n", integer1, integer2);
+C: printf("%d %d\n", integer1, integer2);
+C++: std::cout << integer1 << " " << integer2 << std::endl;
+\end{verbatim}
+
+ \item É permitido consultar livros, anotações ou qualquer outro material impresso durante a prova;
+
+ \item A correção é automatizada, portanto, \textbf{siga atentamente as exigências da tarefa quanto ao formato da
+       entrada e saída conforme as amostras dos exemplos}. Deve-se  considerar entradas e saídas padrão;
+       
+ \item Todos os compiladores (Java, Python, C e C++) são padrões da distribuição Ubuntu versão 16.04 (gcc C11 habilitado);         
+       
+ \item Procure resolver o problema de maneira eficiente. Se o tempo superar o limite pré-definido, a solução não é aceita.
+       As soluções são testadas com outras entradas além das apresentadas como exemplo dos problemas;
+       
+ \item Teste seu programa antes de submetê-lo. A cada problema detectado (erro de compilação, erro em tempo de execução, solução incorreta, formatação imprecisa, tempo excedido $\dots$), há penalização de $20$ minutos.
+       O tempo é critério de desempate entre duas ou mais equipes com a mesma quantidade de problemas resolvidos;
+       
+ \item Utilize o \emph{clarification} para dúvidas da prova. Os juízes podem \textbf{opcionalmente} atendê-lo com respostas acessíveis a todos;
+ 
+ \item Algumas interfaces estão disponíveis nas máquinas Linux, que podem ser utilizada
+no lugar da \textit{Unity}. Para isto, basta dar \textit{logout}, e 
+ selecionar a interface desejada. Usuário e senha: \textit{udesc};
+
+\item Ao pessoal local: \textbf{cuidado com os pés sobre as mesas
+para não desligarem nenhum estabilizador/computador de outras equipes}!
+
+%\item Na sequência do {\em Pão de Queijo}, segue a {\em Queijo Francês},
+ %é uma homenagem a França vencedora da Copa do Mundo de Futebol;
+
+\end{itemize}
+\end{small}
+
+
+
+\clearpage
+
+\pagestyle{fancy}
+\renewcommand{\footrulewidth}{0.7pt}
+\renewcommand{\headrulewidth}{0.7pt}
+\lhead{\textit{Queijo Francês}}
+\chead{}
+\rhead{Maratonas de Programação -- UDESC/IFMS}
+\cfoot{\thepage}
+
+
+\section{Problemas em Java}
+
+Aos {\em javaneiros}: {\bf o nome da classe deve ser o mesmo nome do arquivo a ser submetido}. 
+    Ex: {\bf classe petrus}, nome do arquivo {\bf petrus.java}.
+    Para esta prova segue a lista de {\bf Problemas : Classname}
+
+{\bf 
+\begin{description}
+\itemsep -3pt
+\item A : angles
+\item B : golf
+\item C : fitness
+\item D : music
+\item E : byte
+\item F : chairs
+\item G : letter
+\item H : league
+\item I : planes
+\item J : trees
+\item K : packing
+\item L : domino
+\item M : infinite
+\item N : competition
+\item O : school
+
+\end{description}
+}
+%\maketitle
+%\tableofcontents
+
+\vfill
+\section{Patrocinador e Agradecimentos}
+\begin{itemize}
+\setlength\itemsep{-3pt}
+\item LINX -- da 1a. seletiva de 2018
+\item TOTVS -- patrocínio da regional de 2018
+\item DCC/UDESC
+\item Direção do CCT/UDESC
+\item Alguns \textbf{muitos} outros anônimos! 
+\end{itemize}
+
+\end{document}

@@ -1,0 +1,3 @@
+http://www.informatik.uni-ulm.de/acm/Locals/2008/html/eldorado.html
+
+(é necessário programação dinâmica)

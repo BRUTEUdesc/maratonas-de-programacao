@@ -1,0 +1,171 @@
+
+Logins e Senhas dos Competidores da Terceira Seletiva de 2012!
+
+username=team01
+userfullname=[UDESC]WISAG
+userpassword=rpgrpg
+
+username=team02
+userfullname=[UDESC-CCT]SuperClass
+userpassword=luna
+
+username=team03
+userfullname=[UDESC]Balde Samurai Bangueado
+userpassword=yoda
+
+username=team04
+userfullname=[UDESC]Noolab
+userpassword=123456
+
+username=team05
+userfullname=[Udesc]teste
+userpassword=9897
+
+username=team06
+userfullname=[UDESC]Overclock
+userpassword=ehnois
+
+username=team07
+userfullname=[UDESC]LoL
+userpassword=lol123
+
+username=team08
+userfullname=[UDESC]Blitzkode
+userpassword=patodolan
+
+username=team09
+userfullname=[UDESC]Potato
+userpassword=vsb
+
+username=team10
+userfullname=[UDESC]Elefante
+userpassword=rinoceronte
+
+username=team11
+userfullname=[UDESC]Tentadores
+userpassword=mouse123
+
+username=team12
+userfullname=[UDESC]540-120
+userpassword=senha
+
+username=team13
+userfullname=[UDESC- CCT]Rocket
+userpassword=senha
+
+username=team14
+userfullname=[UDESC - CCT]Fiorese
+userpassword=ele2012
+
+username=team15
+userfullname=[UDESC]Final Fantasy
+userpassword=1234567
+
+username=team16
+userfullname=[UDESC]Agora Vai III - O Retorno
+userpassword=123456
+
+username=team17
+userfullname=[UDESC]Cparô
+userpassword=protocolo
+
+username=team18
+userfullname=[UDESC]Os piá do véio Plety
+userpassword=ladyjava
+
+username=team19
+userfullname=[UDESC]Buquê de Flor
+userpassword=123123
+
+username=team20
+userfullname=[UDESC/UNICAMP]Marlon/Henrique
+userpassword=senha123
+
+username=team21
+userfullname=[UDESC]Geek_Rulez
+userpassword=pokemon
+
+username=team22
+userfullname=[UDESC]The C-ake is a Lie
+userpassword=lppdbr123
+
+username=team23
+userfullname=[UDESC]Brutal Coding
+userpassword=melitta
+
+username=team24
+userfullname=[UDESC]Matematica
+userpassword=1234
+
+username=team25
+userfullname=[UDESC]TeamPresencial1
+userpassword=team01
+
+username=team26
+userfullname=[UDESC]TeamPresencial2
+userpassword=team02
+
+username=team27
+userfullname=[UDESC]TeamPresencial3
+userpassword=team03
+
+username=team28
+userfullname=[IFPE]Os Verdadeiros Vingadores
+userpassword=boot
+
+username=team29
+userfullname=[INF - UFG]Null
+userpassword=nullufg01
+
+username=team30
+userfullname=[UFG]Cheira Cola
+userpassword=methanech4
+
+username=team31
+userfullname=[UFOP]U.F. de Outro Planeta
+userpassword=123456
+
+username=team32
+userfullname=[UFPI]Ad Infinitun
+userpassword=helloworld
+
+username=team33
+userfullname=[UFG]Fake Monkeys
+userpassword=umasenhadiferente
+
+username=team34
+userfullname=[UFU]Chinelada na Orelha
+userpassword=desruga
+
+username=team35
+userfullname=[UFSC]Gargamel`s team
+userpassword=batatafrita
+
+username=team36
+userfullname=[Unicamp]Alguém ai?
+userpassword=drhddhh
+
+username=team37
+userfullname=[Universidade de Taubaté]"while True: yield('AC')"
+userpassword=unitau
+
+username=team38
+userfullname=[UFPR]Berro Trypanossomático
+userpassword=todomundopodever
+
+username=team39
+userfullname=[UNICAMP]xth1
+userpassword=pdguloso
+
+username=team40
+userfullname=[NULL]TeamRemoto2
+userpassword=remoto2
+
+username=team41
+userfullname=[NULL]TeamRemoto1
+userpassword=remoto1
+
+username=team42
+userfullname=[NULL]TeamRemoto3
+userpassword=remoto3
+

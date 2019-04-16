@@ -1,0 +1,237 @@
+\documentclass[12pt,oneside]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[portuges]{babel}
+\usepackage[dvips]{graphicx}
+\usepackage{wrapfig}
+\usepackage{epsfig}
+\usepackage{fancyhdr}
+\usepackage{multicol}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=blue]{hyperref}
+\usepackage{nomencl}    % glossario
+\usepackage{amssymb,comment,listings}
+\usepackage{subcaption}
+\usepackage{color}
+\usepackage{tikz}
+\usepackage{verbatim}
+\usepackage{tabularx}
+\usetikzlibrary{calc}
+\usetikzlibrary{decorations.pathreplacing}
+\usepackage{amsmath}
+
+%=======================================================================
+
+%\hyphenation{}
+\paperheight    297mm
+\paperwidth     210mm
+\voffset         -15mm
+\headheight      15pt %% tamanho de letra
+\headsep         5mm  %% para o início do texto
+\topmargin      005.0mm
+\oddsidemargin  -2.0mm
+\evensidemargin -2.0mm
+\textwidth      167.0mm
+\textheight     250.0mm
+\footskip       10.0mm 
+
+%\makeglossary
+%\makenomenclature
+%\makeindex
+
+\author{$2^a$ Seletiva Interna da UDESC e IFMS--Aquidauana -- 2018}
+\title{Queijo Francês}
+\date{18 de agosto de 2018}
+
+\makeatletter
+\setlength{\@fptop}{0pt}
+\makeatother
+
+\begin{document}
+
+
+\begin{center}
+\textbf{\Huge Caderno de Provas -- \textit{Queijo Francês}} \\
+\vspace{0.2cm}
+\textbf{\textsc{\large $2^a$ Seletiva Interna -- 2018/2}} \\
+\vspace{0.5cm}
+\textbf{\textsc{\large UDESC--Joinville e IFMS--Aquidauana}} \\
+\vspace{0.5cm}
+\textbf{Servidor BOCA (Arena Joinville):}\\
+\texttt{\large \url{http://200.19.107.67/boca/}} \\
+\vspace{1.0cm}
+\begin{figure}[h!]
+\centering
+ \includegraphics[scale=0.5]{figuras/capa.pdf}
+\end{figure}
+\vspace{1.0cm}
+\textbf{Organização e Realização:}\\
+\vspace{0.4cm}
+{\small Claudio Cesar de Sá (coordenação geral), Peter Laureano Brendel (coordenação técnica), Daniela Marioti, Gabriel Hermann Negri, Lucas Hermann Negri, Rogério Eduardo da Silva, Diego Buchinger, Roberto Rosso.
+}
+%%%\textit{\{alexandre,rosso,claudio\} at joinville dot udesc dot br}}\\
+\end{center}
+
+
+\begin{center}
+\vfill
+\textbf{Patrocinador 2018: {\sf Linx}}
+\end{center}
+
+\newpage
+\section*{Lembretes:}
+
+\begin{small}
+\begin{itemize}
+\itemsep -3pt
+
+ \item Aos {\em javaneiros}: {\bf o nome da classe deve ser o mesmo nome do arquivo a ser submetido}. 
+    Ex: {\bf classe petrus}, nome do arquivo {\bf petrus.java};
+
+\item Exemplo de leitura de entradas que funcionam:
+\begin{verbatim}
+Java: (import java.util.Scanner)
+Scanner in = new Scanner(System.in); 
+ou
+Scanner stdin = new Scanner(new BufferedReader(new InputStreamReader(System.in)));
+
+C: (#include <stdio.h>)
+int integer1; scanf("%d", &integer1);
+
+C++: (#include <iostream>)
+int integer1; std::cin >> integer1;
+\end{verbatim}
+
+Exemplo de saída de entradas:
+\begin{verbatim}
+Java: System.out.format("%d %d\n", integer1, integer2);
+C: printf("%d %d\n", integer1, integer2);
+C++: std::cout << integer1 << " " << integer2 << std::endl;
+\end{verbatim}
+
+ \item É permitido consultar livros, anotações ou qualquer outro material impresso durante a prova;
+
+ \item A correção é automatizada, portanto, \textbf{siga atentamente as exigências da tarefa quanto ao formato da
+       entrada e saída conforme as amostras dos exemplos}. Deve-se  considerar entradas e saídas padrão;
+       
+ \item Todos os compiladores (Java, Python, C e C++) são padrões da distribuição Ubuntu versão 16.04 (gcc C11 habilitado);         
+       
+ \item Procure resolver o problema de maneira eficiente. Se o tempo superar o limite pré-definido, a solução não é aceita.
+       As soluções são testadas com outras entradas além das apresentadas como exemplo dos problemas;
+       
+ \item Teste seu programa antes de submetê-lo. A cada problema detectado (erro de compilação, erro em tempo de execução, solução incorreta, formatação imprecisa, tempo excedido $\dots$), há penalização de $20$ minutos.
+       O tempo é critério de desempate entre duas ou mais equipes com a mesma quantidade de problemas resolvidos;
+       
+ \item Utilize o \emph{clarification} para dúvidas da prova. Os juízes podem \textbf{opcionalmente} atendê-lo com respostas acessíveis a todos;
+ 
+ \item Algumas interfaces estão disponíveis nas máquinas Linux, que podem ser utilizada
+no lugar da \textit{Unity}. Para isto, basta dar \textit{logout}, e 
+ selecionar a interface desejada. Usuário e senha: \textit{udesc};
+
+\item Ao pessoal local: \textbf{cuidado com os pés sobre as mesas
+para não desligarem nenhum estabilizador/computador de outras equipes}!
+
+\item Na sequência do {\em Pão de Queijo}, segue a {\em Queijo Francês},
+ é uma homenagem a França vencedora da Copa do Mundo de Futebol;
+
+\end{itemize}
+\end{small}
+
+\vfill
+\section*{Patrocinador e Agradecimentos}
+\begin{itemize}
+\setlength\itemsep{-3pt}
+\item Linx -- Patrocinador oficial do ano de 2018;
+\item DCC/UDESC;
+\item Aos bolsistas deste ano pelo empenho;
+\item Alguns, muitos outros anônimos.
+\end{itemize}
+
+\clearpage
+
+\pagestyle{fancy}
+\renewcommand{\footrulewidth}{0.7pt}
+\renewcommand{\headrulewidth}{0.7pt}
+\lhead{\textit{Queijo Francês}}
+\chead{}
+\rhead{Maratonas de Programação -- UDESC/IFMS}
+\cfoot{\thepage}
+
+
+\maketitle
+\tableofcontents
+
+\begin{center}
+\textcolor{red}{\rule{0.7\paperwidth}{2pt}}\\
+
+\textbf{\textcolor{red}{Atenção quanto aos nomes e números dos problemas!!!}}\\
+\textcolor{red}{\rule{0.7\paperwidth}{2pt}}\\
+\end{center}
+\clearpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newpage
+\input{../A-Ataque_Cavalos/cavalos.tex}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newpage
+\input{../B-Buracos_Galaticos/buracos.tex}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newpage
+\input{../C-Carimbos/carimbos.tex}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newpage
+\input{../D-Diamantes/diamantes.tex}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+\newpage
+\input{../E-Estrelas/estrelas.tex}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newpage
+\input{../F-Faces_Facil/faces_facil.tex}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\newpage
+%\input{../G-Geometria/G-geometria}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\newpage
+%\input{../H-Hoje/H-Hoje.tex}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\newpage
+%\input{../I-Inventando_Regras/I-Inventando_Regras.tex}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newpage
+\input{../G-Jogo_com_Numeros/jogo_com_numeros.tex}
+%%%%%%%%%%%%%%%%%%%J%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\newpage 
+%\input{../L-Legitimo/L-Legitimo.tex}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\newpage
+%\input{../M-Marelinha/M-Marelinha.tex}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newpage
+\input{../H-Numeros_Corcova/numeros_corcova.tex}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newpage
+\input{../I-Queda/queda.tex}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newpage
+\input{../J-Runas/runas.tex}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%\newpage
+%\input{../S-Soma_Gauss/S-Soma_Gauss.tex}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{document}

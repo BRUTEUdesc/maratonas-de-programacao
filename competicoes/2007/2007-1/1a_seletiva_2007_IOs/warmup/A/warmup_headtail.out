@@ -1,0 +1,10 @@
+Mary won 0 times and John won 1 times
+Mary won 1 times and John won 0 times
+Mary won 3 times and John won 1 times
+Mary won 4 times and John won 6 times
+Mary won 11 times and John won 9 times
+Mary won 46 times and John won 4 times
+Mary won 73 times and John won 27 times
+Mary won 682 times and John won 318 times
+Mary won 2495 times and John won 2505 times
+Mary won 8306 times and John won 1694 times

@@ -1,0 +1,60 @@
+Teste 1
+536870911
+
+Teste 2
+268435455
+
+Teste 3
+67108863
+
+Teste 4
+1048575
+
+Teste 5
+524287
+
+Teste 6
+262143
+
+Teste 7
+131071
+
+Teste 8
+65535
+
+Teste 9
+1023
+
+Teste 10
+2047
+
+Teste 11
+4095
+
+Teste 12
+8191
+
+Teste 13
+16383
+
+Teste 14
+32767
+
+Teste 15
+2097151
+
+Teste 16
+4194303
+
+Teste 17
+8388607
+
+Teste 18
+16777215
+
+Teste 19
+33554431
+
+Teste 20
+134217727
+

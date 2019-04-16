@@ -1,0 +1,1096 @@
+%!PS-Adobe-3.0
+%%Title: mini_maratona_UFPR_UDESC_2008.txt
+%%For: Andre Guedes
+%%Creator: a2ps version 4.13
+%%CreationDate: Fri May  9 09:09:22 2008
+%%BoundingBox: 24 24 571 818
+%%DocumentData: Clean7Bit
+%%Orientation: Landscape
+%%Pages: 3
+%%PageOrder: Ascend
+%%DocumentMedia: A4 595 842 0 () ()
+%%DocumentNeededResources: font Courier
+%%+ font Courier-Bold
+%%+ font Courier-BoldOblique
+%%+ font Courier-Oblique
+%%+ font Helvetica
+%%+ font Helvetica-Bold
+%%+ font Symbol
+%%+ font Times-Bold
+%%+ font Times-Roman
+%%DocumentProcessColors: Black 
+%%DocumentSuppliedResources: procset a2ps-a2ps-hdr
+%%+ procset a2ps-black+white-Prolog
+%%+ encoding ISO-8859-1Encoding
+%%EndComments
+/a2psdict 200 dict def
+a2psdict begin
+%%BeginProlog
+%%Copyright: (c) 1988, 89, 90, 91, 92, 93 Miguel Santana
+%%Copyright: (c) 1995, 96, 97, 98 Akim Demaille, Miguel Santana
+% Check PostScript language level.
+/languagelevel where {
+  pop /gs_languagelevel languagelevel def
+} {
+  /gs_languagelevel 1 def
+} ifelse
+
+% EPSF import as in the Red Book
+/BeginInclude {
+  /b4_Inc_state save def    		% Save state for cleanup
+  /dict_count countdictstack def	% Count objects on dict stack
+  /op_count count 1 sub def		% Count objects on operand stack 
+  userdict begin
+    0 setgray 0 setlinecap
+    1 setlinewidth 0 setlinejoin
+    10 setmiterlimit [ ] 0 setdash newpath
+    gs_languagelevel 1 ne {
+      false setstrokeadjust false setoverprint 
+    } if
+} bind def
+
+/EndInclude {
+  count op_count sub { pos } repeat	% Clean up stacks
+  countdictstack dict_count sub { end } repeat
+  b4_Inc_state restore
+} bind def
+
+/BeginEPSF {
+  BeginInclude
+  /showpage { } def
+} bind def
+
+/EndEPSF {
+  EndInclude
+} bind def
+
+% Page prefeed
+/page_prefeed {         % bool -> -
+  statusdict /prefeed known {
+    statusdict exch /prefeed exch put
+  } {
+    pop
+  } ifelse
+} bind def
+
+/deffont {
+  findfont exch scalefont def
+} bind def
+
+/reencode_font {
+  findfont reencode 2 copy definefont pop def
+} bind def
+
+% Function c-show (str => -)
+% centers text only according to x axis.
+/c-show { 
+  dup stringwidth pop
+  2 div neg 0 rmoveto
+  show
+} bind def
+
+% Function l-show (str => -)
+% prints texts so that it ends at currentpoint
+/l-show {
+  dup stringwidth pop neg 
+  0 
+  rmoveto show
+} bind def
+
+% center-fit show (str w => -)
+% show centered, and scale currentfont so that the width is less than w
+/cfshow {
+  exch dup stringwidth pop
+  % If the title is too big, try to make it smaller
+  3 2 roll 2 copy
+  gt
+  { % if, i.e. too big
+    exch div
+    currentfont exch scalefont setfont
+  } { % ifelse
+    pop pop 
+  }
+  ifelse
+  c-show			% center title
+} bind def
+
+% Return the y size of the current font
+% - => fontsize
+/currentfontsize {
+  currentfont /FontType get 0 eq {
+    currentfont /FontMatrix get 3 get
+  }{
+    currentfont /FontMatrix get 3 get 1000 mul
+  } ifelse
+} bind def
+
+% reencode the font
+% <encoding-vector> <fontdict> -> <newfontdict>
+/reencode { %def
+  dup length 5 add dict begin
+    { %forall
+      1 index /FID ne 
+      { def }{ pop pop } ifelse
+    } forall
+    /Encoding exch def
+
+    % Use the font's bounding box to determine the ascent, descent,
+    % and overall height; don't forget that these values have to be
+    % transformed using the font's matrix.
+    % We use `load' because sometimes BBox is executable, sometimes not.
+    % Since we need 4 numbers an not an array avoid BBox from being executed
+    /FontBBox load aload pop
+    FontMatrix transform /Ascent exch def pop
+    FontMatrix transform /Descent exch def pop
+    /FontHeight Ascent Descent sub def
+
+    % Define these in case they're not in the FontInfo (also, here
+    % they're easier to get to.
+    /UnderlinePosition 1 def
+    /UnderlineThickness 1 def
+    
+    % Get the underline position and thickness if they're defined.
+    currentdict /FontInfo known {
+      FontInfo
+      
+      dup /UnderlinePosition known {
+	dup /UnderlinePosition get
+	0 exch FontMatrix transform exch pop
+	/UnderlinePosition exch def
+      } if
+      
+      dup /UnderlineThickness known {
+	/UnderlineThickness get
+	0 exch FontMatrix transform exch pop
+	/UnderlineThickness exch def
+      } if
+      
+    } if
+    currentdict 
+  end 
+} bind def
+
+% composite fonts for ASCII-EUC mixed strings
+% Version 1.2 1/31/1990
+% Original Ken'ichi HANDA (handa@etl.go.jp)
+% Modified Norio Katayama (katayama@rd.nacsis.ac.jp),1998
+% Extend & Fix Koji Nakamaru (maru@on.cs.keio.ac.jp), 1999
+% Anyone can freely copy, modify, distribute this program.
+
+/copyfont {	% font-dic extra-entry-count  copyfont  font-dic
+	1 index maxlength add dict begin
+	{	1 index /FID ne 2 index /UniqueID ne and
+		{def} {pop pop} ifelse
+	} forall
+	currentdict
+	end
+} bind def
+
+/compositefont { % ASCIIFontName EUCFontName RomanScale RomanOffset Rot(T/F) compositefont font
+    /RomanRotation exch def
+    /RomanOffset exch def
+    /RomanScale exch def
+    userdict /fixeucfont_dict known not {
+	userdict begin
+	    /fixeucfont_dict 2 dict begin
+		/UpperByteEncoding [
+		    16#00 1 16#20 { pop 0 } for
+		    16#21 1 16#28 { 16#20 sub } for
+		    16#29 1 16#2F { pop 0 } for
+		    16#30 1 16#74 { 16#27 sub } for
+		    16#75 1 16#FF { pop 0 } for
+		] def
+	        /LowerByteEncoding [
+		    16#00 1 16#A0 { pop /.notdef } for
+		    16#A1 1 16#FE { 16#80 sub 16 2 string cvrs
+				    (cXX) dup 1 4 -1 roll
+				    putinterval cvn } for
+		    /.notdef
+		] def
+		currentdict
+	    end def
+	end
+    } if
+    findfont dup /FontType get 0 eq {
+	14 dict begin
+	    %
+	    % 7+8 bit EUC font
+	    %
+	    12 dict begin
+		/EUCFont exch def
+		/FontInfo (7+8 bit EUC font) readonly def
+		/PaintType 0 def
+		/FontType 0 def
+		/FontMatrix matrix def
+		% /FontName
+		/Encoding fixeucfont_dict /UpperByteEncoding get def
+		/FMapType 2 def
+		EUCFont /WMode known
+		{ EUCFont /WMode get /WMode exch def }
+		{ /WMode 0 def } ifelse
+		/FDepVector [
+		    EUCFont /FDepVector get 0 get
+		    [ 16#21 1 16#28 {} for 16#30 1 16#74 {} for ]
+		    {
+			13 dict begin
+			    /EUCFont EUCFont def
+			    /UpperByte exch 16#80 add def	
+			    % /FontName
+			    /FontInfo (EUC lower byte font) readonly def
+			    /PaintType 0 def
+			    /FontType 3 def
+			    /FontMatrix matrix def
+			    /FontBBox {0 0 0 0} def
+			    /Encoding
+				fixeucfont_dict /LowerByteEncoding get def
+			    % /UniqueID
+			    % /WMode
+			    /BuildChar {
+				gsave
+				exch dup /EUCFont get setfont
+				/UpperByte get
+				2 string
+				dup 0 4 -1 roll put
+				dup 1 4 -1 roll put
+				dup stringwidth setcharwidth
+				0 0 moveto show
+				grestore
+			    } bind def
+			    currentdict
+			end
+			/lowerbytefont exch definefont
+		    } forall
+		] def
+		currentdict
+	    end
+	    /eucfont exch definefont
+	    exch
+	    findfont 1 copyfont dup begin
+		RomanRotation {
+			/FontMatrix FontMatrix
+			[ 0 RomanScale neg RomanScale 0 RomanOffset neg 0 ]
+			matrix concatmatrix def
+		}{
+			/FontMatrix FontMatrix
+			[ RomanScale 0 0 RomanScale 0 RomanOffset ] matrix concatmatrix
+			def
+			/CDevProc
+			    {pop pop pop pop 0 exch -1000 exch 2 div 880} def
+		} ifelse
+	    end
+	    /asciifont exch definefont
+	    exch
+	    /FDepVector [ 4 2 roll ] def
+	    /FontType 0 def
+	    /WMode 0 def
+	    /FMapType 4 def
+	    /FontMatrix matrix def
+	    /Encoding [0 1] def
+	    /FontBBox {0 0 0 0} def
+%	    /FontHeight 1.0 def % XXXX
+	    /FontHeight RomanScale 1.0 ge { RomanScale }{ 1.0 } ifelse def
+	    /Descent -0.3 def   % XXXX
+	    currentdict
+	end
+	/tmpfont exch definefont
+	pop
+	/tmpfont findfont
+    }{
+	pop findfont 0 copyfont
+    } ifelse
+} def	
+
+/slantfont {	% FontName slant-degree  slantfont  font'
+    exch findfont 1 copyfont begin
+    [ 1 0 4 -1 roll 1 0 0 ] FontMatrix exch matrix concatmatrix
+    /FontMatrix exch def
+    currentdict
+    end
+} def
+
+% Function print line number (<string> # -)
+/# {
+  gsave
+    sx cw mul neg 2 div 0 rmoveto
+    f# setfont
+    c-show
+  grestore
+} bind def
+
+% -------- Some routines to enlight plain b/w printings ---------
+
+% Underline
+% width --
+/dounderline {
+  currentpoint
+  gsave
+    moveto
+    0 currentfont /Descent get currentfontsize mul rmoveto
+    0 rlineto
+    stroke
+  grestore
+} bind def
+
+% Underline a string
+% string --
+/dounderlinestring {
+  stringwidth pop
+  dounderline
+} bind def
+
+/UL {
+  /ul exch store
+} bind def
+
+% Draw a box of WIDTH wrt current font
+% width --
+/dobox {
+  currentpoint
+  gsave
+    newpath
+    moveto
+    0 currentfont /Descent get currentfontsize mul rmoveto
+    dup 0 rlineto
+    0 currentfont /FontHeight get currentfontsize mul rlineto
+    neg 0 rlineto
+    closepath
+    stroke
+  grestore
+} bind def
+
+/BX {
+  /bx exch store
+} bind def
+
+% Box a string
+% string --
+/doboxstring {
+  stringwidth pop
+  dobox
+} bind def
+
+%
+% ------------- Color routines ---------------
+%
+/FG /setrgbcolor load def
+
+% Draw the background
+% width --
+/dobackground {
+  currentpoint
+  gsave
+    newpath
+    moveto
+    0 currentfont /Descent get currentfontsize mul rmoveto
+    dup 0 rlineto
+    0 currentfont /FontHeight get currentfontsize mul rlineto
+    neg 0 rlineto
+    closepath
+    bgcolor aload pop setrgbcolor
+    fill
+  grestore
+} bind def
+
+% Draw bg for a string
+% string --
+/dobackgroundstring {
+  stringwidth pop
+  dobackground
+} bind def
+
+
+/BG {
+  dup /bg exch store
+  { mark 4 1 roll ] /bgcolor exch store } if
+} bind def
+
+
+/Show {
+  bg { dup dobackgroundstring } if
+  ul { dup dounderlinestring } if
+  bx { dup doboxstring } if
+  show
+} bind def
+
+% Function T(ab), jumps to the n-th tabulation in the current line
+/T {
+  cw mul x0 add
+  bg { dup currentpoint pop sub dobackground } if
+  ul { dup currentpoint pop sub dounderline } if
+  bx { dup currentpoint pop sub dobox } if
+  y0 moveto
+} bind def
+
+% Function n: move to the next line
+/n {
+  /y0 y0 bfs sub store
+  x0 y0 moveto
+} bind def
+
+% Function N: show and move to the next line
+/N {
+  Show
+  /y0 y0 bfs sub store
+  x0 y0 moveto
+} bind def
+
+/S {
+  Show
+} bind def
+
+%%BeginResource: procset a2ps-a2ps-hdr 2.0 2
+%%Copyright: (c) 1988, 89, 90, 91, 92, 93 Miguel Santana
+%%Copyright: (c) 1995, 96, 97, 98 Akim Demaille, Miguel Santana
+% Function title: prints page header.
+% <ct> <rt> <lt> are passed as argument
+/title { 
+  % 1. Draw the background
+  x v get y v get moveto
+  gsave
+    0 th 2 div neg rmoveto 
+    th setlinewidth
+    0.95 setgray
+    pw 0 rlineto stroke
+  grestore
+  % 2. Border it
+  gsave
+    0.7 setlinewidth
+    pw 0 rlineto
+    0 th neg rlineto
+    pw neg 0 rlineto
+    closepath stroke
+  grestore
+  % stk: ct rt lt
+  x v get y v get th sub 1 add moveto
+%%IncludeResource: font Helvetica
+  fHelvetica fnfs 0.8 mul scalefont setfont
+  % 3. The left title
+  gsave
+    dup stringwidth pop fnfs 0.8 mul add exch % leave space took on stack
+    fnfs 0.8 mul hm rmoveto
+    show			% left title
+  grestore
+  exch
+  % stk: ct ltw rt
+  % 4. the right title
+  gsave
+    dup stringwidth pop fnfs 0.8 mul add exch % leave space took on stack
+    dup
+    pw exch stringwidth pop fnfs 0.8 mul add sub
+    hm
+    rmoveto
+    show			% right title
+  grestore
+  % stk: ct ltw rtw
+  % 5. the center title
+  gsave
+    pw 3 1 roll
+    % stk: ct pw ltw rtw
+    3 copy 
+    % Move to the center of the left room
+    sub add 2 div hm rmoveto
+    % What is the available space in here?
+    add sub fnfs 0.8 mul sub fnfs 0.8 mul sub
+    % stk: ct space_left
+%%IncludeResource: font Helvetica-Bold
+  fHelvetica-Bold fnfs scalefont setfont
+    cfshow
+  grestore
+} bind def
+
+% Function border: prints virtual page border
+/border { %def
+  gsave				% print four sides
+    0 setgray
+    x v get y v get moveto
+    0.7 setlinewidth		% of the square
+    pw 0 rlineto
+    0 ph neg rlineto
+    pw neg 0 rlineto
+    closepath stroke
+  grestore
+} bind def
+
+% Function water: prints a water mark in background
+/water { %def
+  gsave
+    scx scy moveto rotate
+%%IncludeResource: font Times-Bold
+  fTimes-Bold 100 scalefont setfont
+    .97 setgray
+    dup stringwidth pop 2 div neg -50 rmoveto
+    show
+  grestore
+} bind def
+
+% Function rhead: prints the right header
+/rhead {  %def
+  lx ly moveto
+  fHelvetica fnfs 0.8 mul scalefont setfont
+  l-show
+} bind def
+
+% Function footer (cf rf lf -> -)
+/footer {
+  fHelvetica fnfs 0.8 mul scalefont setfont
+  dx dy moveto
+  show
+
+  snx sny moveto
+  l-show
+  
+  fnx fny moveto
+  c-show
+} bind def
+%%EndResource
+%%BeginResource: procset a2ps-black+white-Prolog 2.0 1
+
+% Function T(ab), jumps to the n-th tabulation in the current line
+/T { 
+  cw mul x0 add y0 moveto
+} bind def
+
+% Function n: move to the next line
+/n { %def
+  /y0 y0 bfs sub store
+  x0 y0 moveto
+} bind def
+
+% Function N: show and move to the next line
+/N {
+  Show
+  /y0 y0 bfs sub store
+  x0 y0 moveto
+}  bind def
+
+/S {
+  Show
+} bind def
+
+/p {
+  false UL
+  false BX
+  fCourier bfs scalefont setfont
+  Show
+} bind def
+
+/sy {
+  false UL
+  false BX
+  fSymbol bfs scalefont setfont
+  Show
+} bind def
+
+/k {
+  false UL
+  false BX
+  fCourier-Oblique bfs scalefont setfont
+  Show
+} bind def
+
+/K {
+  false UL
+  false BX
+  fCourier-Bold bfs scalefont setfont
+  Show
+} bind def
+
+/c {
+  false UL
+  false BX
+  fCourier-Oblique bfs scalefont setfont
+  Show
+} bind def
+
+/C {
+  false UL
+  false BX
+  fCourier-BoldOblique bfs scalefont setfont
+  Show 
+} bind def
+
+/l {
+  false UL
+  false BX
+  fHelvetica bfs scalefont setfont
+  Show
+} bind def
+
+/L {
+  false UL
+  false BX
+  fHelvetica-Bold bfs scalefont setfont
+  Show 
+} bind def
+
+/str{
+  false UL
+  false BX
+  fTimes-Roman bfs scalefont setfont
+  Show
+} bind def
+
+/e{
+  false UL
+  true BX
+  fHelvetica-Bold bfs scalefont setfont
+  Show
+} bind def
+
+%%EndResource
+%%EndProlog
+%%BeginSetup
+%%IncludeResource: font Courier
+%%IncludeResource: font Courier-Oblique
+%%IncludeResource: font Courier-Bold
+%%IncludeResource: font Times-Roman
+%%IncludeResource: font Symbol
+%%IncludeResource: font Courier-BoldOblique
+%%BeginResource: encoding ISO-8859-1Encoding
+/ISO-8859-1Encoding [
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef 
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef 
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef 
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef 
+/space /exclam /quotedbl /numbersign /dollar /percent /ampersand /quoteright 
+/parenleft /parenright /asterisk /plus /comma /minus /period /slash 
+/zero /one /two /three /four /five /six /seven 
+/eight /nine /colon /semicolon /less /equal /greater /question 
+/at /A /B /C /D /E /F /G 
+/H /I /J /K /L /M /N /O 
+/P /Q /R /S /T /U /V /W 
+/X /Y /Z /bracketleft /backslash /bracketright /asciicircum /underscore 
+/quoteleft /a /b /c /d /e /f /g 
+/h /i /j /k /l /m /n /o 
+/p /q /r /s /t /u /v /w 
+/x /y /z /braceleft /bar /braceright /asciitilde /.notdef 
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef 
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef 
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef 
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef 
+/space /exclamdown /cent /sterling /currency /yen /brokenbar /section 
+/dieresis /copyright /ordfeminine /guillemotleft /logicalnot /hyphen /registered /macron 
+/degree /plusminus /twosuperior /threesuperior /acute /mu /paragraph /bullet 
+/cedilla /onesuperior /ordmasculine /guillemotright /onequarter /onehalf /threequarters /questiondown 
+/Agrave /Aacute /Acircumflex /Atilde /Adieresis /Aring /AE /Ccedilla 
+/Egrave /Eacute /Ecircumflex /Edieresis /Igrave /Iacute /Icircumflex /Idieresis 
+/Eth /Ntilde /Ograve /Oacute /Ocircumflex /Otilde /Odieresis /multiply 
+/Oslash /Ugrave /Uacute /Ucircumflex /Udieresis /Yacute /Thorn /germandbls 
+/agrave /aacute /acircumflex /atilde /adieresis /aring /ae /ccedilla 
+/egrave /eacute /ecircumflex /edieresis /igrave /iacute /icircumflex /idieresis 
+/eth /ntilde /ograve /oacute /ocircumflex /otilde /odieresis /divide 
+/oslash /ugrave /uacute /ucircumflex /udieresis /yacute /thorn /ydieresis 
+] def
+%%EndResource
+% Initialize page description variables.
+/sh 595 def
+/sw 842 def
+/llx 24 def
+/urx 818 def
+/ury 571 def
+/lly 24 def
+/#copies 1 def
+/th 15.000000 def
+/fnfs 11 def
+/bfs 8.005733 def
+/cw 4.803440 def
+
+% Dictionary for ISO-8859-1 support
+/iso1dict 8 dict begin
+  /fCourier ISO-8859-1Encoding /Courier reencode_font
+  /fCourier-Bold ISO-8859-1Encoding /Courier-Bold reencode_font
+  /fCourier-BoldOblique ISO-8859-1Encoding /Courier-BoldOblique reencode_font
+  /fCourier-Oblique ISO-8859-1Encoding /Courier-Oblique reencode_font
+  /fHelvetica ISO-8859-1Encoding /Helvetica reencode_font
+  /fHelvetica-Bold ISO-8859-1Encoding /Helvetica-Bold reencode_font
+  /fTimes-Bold ISO-8859-1Encoding /Times-Bold reencode_font
+  /fTimes-Roman ISO-8859-1Encoding /Times-Roman reencode_font
+currentdict end def
+/bgcolor [ 0 0 0 ] def
+/bg false def
+/ul false def
+/bx false def
+% The font for line numbering
+/f# /Helvetica findfont bfs .6 mul scalefont def
+/fSymbol /Symbol findfont def
+/hm fnfs 0.25 mul def
+/pw
+   cw 81.400000 mul
+def
+/ph
+   501.959430 th add
+def
+/pmw urx llx sub pw 2 mul sub 1 div def
+/pmh 0 def
+/v 0 def
+/x [
+  0
+  dup pmw add pw add
+] def
+/y [
+  pmh ph add 0 mul ph add
+  dup
+] def
+/scx sw 2 div def
+/scy sh 2 div def
+/snx urx def
+/sny lly 2 add def
+/dx llx def
+/dy sny def
+/fnx scx def
+/fny dy def
+/lx snx def
+/ly ury fnfs 0.8 mul sub def
+/sx 0 def
+/tab 8 def
+/x0 0 def
+/y0 0 def
+%%EndSetup
+
+%%Page: (1-2) 1
+%%BeginPageSetup
+/pagesave save def
+sh 0 translate 90 rotate
+%%EndPageSetup
+iso1dict begin
+gsave
+llx lly 12 add translate
+/v 0 store
+/x0 x v get 3.362408 add sx cw mul add store
+/y0 y v get bfs th add sub store
+x0 y0 moveto
+(Problema A - Antenas) p n
+(basename: antenas) N
+() N
+(Voc\352 est\341 ajudando a projetar um conjunto de antenas de telecomunica\347\365es) N
+(para uma  grande empresa. Os pontos  onde as antenas  ser\343o colocadas j\341) N
+(foram escolhidos, mas a pot\352ncia de cada antena ainda n\343o. A pot\352ncia de) N
+(cada antena indica  seu raio de a\347\343o, e duas  antenas podem se comunicar) N
+(diretamente  se cada  uma est\341  dentro  do raio  de a\347\343o  da outra.   As) N
+(mensagens podem  ser transmitidas  entre quaisquer duas  antenas, usando) N
+(outras  antenas como roteadoras  \(comunica\347\343o indireta\),  ou seja,  se a) N
+(antena  X quer  enviar  uma mensagem  para  a antena  Y,  pode enviar  a) N
+(mensagem para  a antena Z, que  a envia para a  antena W, que  por fim a) N
+(envia para a antena Y. Isso s\363 pode  ser feito se as antenas X e Z podem) N
+(se comunicar diretamente, Z e W tamb\351m, e o mesmo para W e Y.) N
+() N
+(Como o custo de manuten\347\343o de  cada antena depende de sua pot\352ncia, voc\352) N
+(deve  escolher as  pot\352ncias  de cada  antena  de forma  a garantir  que) N
+(quaiquer duas antenas possam se  comunicar direta ou indiretamente com o) N
+(menor custo poss\355vel.  Assuma que  s\363 existem 3 diferentes pot\352ncias que) N
+(uma antena pode ter. A antena do tipo A tem raio de a\347\343o de 20km e gasta) N
+(R$100,00 por hora; a  antena do tipo B tem raio de  a\347\343o de 10km e gasta) N
+(R$20,00 por hora; e  a antena do tipo C tem raio de  a\347\343o de 5km e gasta) N
+(R$2,00 por hora. A sua resposta deve ser o tipo de cada uma das antenas.) N
+(Considere que sempre  ser\341 poss\355vel resolver o problema  com os tipos de) N
+(antenas dados.  E  se tiver mais de uma resposta,  a resposta esperada \351) N
+(aquela em que as antenas com o menor identificador fiquem com as menores) N
+(pot\352ncias.) N
+() N
+(Entrada:) N
+() N
+(A entrada \351  composta de v\341rios casos de teste. Um  caso de teste come\347a) N
+(com uma  linha contendo um  \372nico n\372mero inteiro,  N, que \351 o  n\372mero de) N
+(antenas. Considere 1 <= N <= 50.  Cada antena tem um n\372mero de 1 a N. As) N
+(N linhas seguintes s\343o formadas por 2 inteiros Xi e Yi, separados por um) N
+(espa\347o.  Estes  dois n\372meros  s\343o  as  coordenadas  de cada  antena,  em) N
+(metros. Assuma que 0 <= Xi, Yi  <= 20000.  A entrada termina com um caso) N
+(de teste onde N = 0.) N
+() N
+(Sa\355da:) N
+() N
+(Para cada caso de  teste deve ser decidida o tipo cada  antena e a sa\355da) N
+(deve ser uma linha com os tipos \(A,  B ou C\) de cada antena, na ordem de) N
+(seus identificadores, separados por um branco.) N
+() N
+(Exemplo:) N
+() N
+(entrada) N
+(3) N
+(0 0) N
+(6000 6000) N
+(12000 12000) N
+(4) N
+(0 0) N
+(0 4000) N
+(8000 4000) N
+(8000 0) N
+(0) N
+() N
+(sa\355da) N
+(B B B) N
+(C B C B) N
+() N
+(mini_maratona_UFPR_UDESC_2008.txt) (Page 1/6) (May 09, 08 9:09) title
+border
+/v 1 store
+/x0 x v get 3.362408 add sx cw mul add store
+/y0 y v get bfs th add sub store
+x0 y0 moveto
+(Problema B - Palitos) p n
+(basename: palitos) N
+() N
+(Um grupo de amigos costumam jogar  um jogo com palitos.  No jogo existem) N
+(palitos  de f\363sforo  em quantidade  suficiente e  \351 escolhido  um n\372mero) N
+(inteiro  N.  Cada  participante,  na  sua vez,  pega  uma quantidade  de) N
+(palitos que seja  um divisor de N, diferente  de 1 e N, e  que ainda n\343o) N
+(tenha  sido escolhido.   Ganha aquele  que tiver  a menor  quantidade de) N
+(palitos no fim do jogo.) N
+() N
+(Assumindo  que todos  s\343o jogadores  experientes  e que  sempre fazem  a) N
+(melhor jogada poss\355vel,  sua tarefa \351 determinar o  vencedor do jogo, ou) N
+(indicar se n\343o houver um vencedor \(empate\).) N
+() N
+(Entrada:) N
+() N
+(A entrada \351  composta de v\341rios casos de teste. Cada  caso de teste est\341) N
+(descrito em uma  linha com dois inteiros, J  e N.  Onde J \351  o n\372mero de) N
+(jogadores e N \351 o n\372mero escolhido  \(1 <= J,N <= 10.000\).  Assuma que os) N
+(jogadores s\343o numerados de 1 a N e  que o primeiro a jogar \351 o n\372mero 1,) N
+(depois o  2, e assim por  diante. Ap\363s a  jogada do jogador n\372mero  J, o) N
+(jogador n\372mero 1 joga de novo. A  entrada termina com uma linha onde J =) N
+(N = 0.) N
+() N
+(Sa\355da:) N
+() N
+(A sa\355da,  para cada caso de  teste, deve ser  uma linha com o  n\372mero do) N
+(jogador ganhador ou -1, caso n\343o exista.) N
+() N
+(Exemplo:) N
+() N
+(entrada) N
+(2 16) N
+(2 18) N
+(3 24) N
+(3 36) N
+(0 0) N
+() N
+(sa\355da) N
+(2) N
+(1) N
+(1) N
+(2) N
+() N
+(mini_maratona_UFPR_UDESC_2008.txt) (Page 2/6) (May 09, 08 9:09) title
+border
+grestore
+(Printed by Andre Guedes) rhead
+(mini_maratona_UFPR_UDESC_2008.txt) (1/3) (Friday May 09, 2008) footer
+end % of iso1dict
+pagesave restore
+showpage
+%%Page: (3-4) 2
+%%BeginPageSetup
+/pagesave save def
+sh 0 translate 90 rotate
+%%EndPageSetup
+iso1dict begin
+gsave
+llx lly 12 add translate
+/v 0 store
+/x0 x v get 3.362408 add sx cw mul add store
+/y0 y v get bfs th add sub store
+x0 y0 moveto
+(Problema C - Supermercado \(maratona de programa\347\343o de 2002\)) p n
+(basename: mercado) N
+() N
+(Sr. Jones \351 um marido exemplar. Todo s\341bado a Sra. Jones lhe entrega uma) N
+(lista de compras  e ele vai ao supermercado.  Mas o  Sr. Jones n\343o gosta) N
+(de ir ao mercado e quer agilizar as coisas. Ao inv\351s de ficar andando de) N
+(um  lado pro  outro procurando  os \355tens  da lista,  ele quer  seguir os) N
+(corredores  na ordem  ao mesmo  tempo  que a  lista. Note  que um  mesmo) N
+(produto poder ter diversas marcas e portanto diversos pre\347os.) N
+( ) N
+(Ele pediu  a sua ajuda  para escrever um  programa que verifique  se ele) N
+(consegue fazer o que quer e pagar o menor pre\347o.) N
+() N
+(Como ele n\343o quer ter que voltar atr\341s nem nos corredores, nem na lista,) N
+(se ele comprou i-\351simo produto  no seu caminho \(corredores\) como sendo o) N
+(j-\351simo \355tem  da lista,  o \(j+1\)-\351simo \355tem  da lista deve  ser comprado) N
+(dentre  os produtos  que aparecerem  depois do  i-\351simo. Veja  o exemplo) N
+(abaixo,   considerando   que   os   produtos   s\343o   identificados   por) N
+(inteiros. ) N
+(Lista: \(1,1,2,20\) -  note  que o 1  aparece duas vezes) N
+() N
+(Produtos \(na ordem das prateleiras, e com pre\347o\):) N
+([ 2,    1,    20,   1,    5,     2,     20,    20 ]) N
+([0,29, 0,30, 0,15, 1,00, 0,05, 10,00, 20,00, 10,00]) N
+() N
+(Desta  forma, o  custo  m\355nimo que  o  Sr. Jones  consegue, seguindo  as) N
+(restri\347\365es \351  21,30. Ele  n\343o pode comprar  a primeira marca  do produto) N
+(n\372mero  20 \(mais barata\)  pois deve  comprar na  ordem.  Note  que desta) N
+(forma pode ser que n\343o seja  poss\355vel atender a lista toda, e neste caso) N
+(o seu programa deve avis\341-lo.) N
+() N
+(Entrada:) N
+() N
+(A entrada  consiste de v\341rios casos  de teste \(sess\365es  de compra\). Cada) N
+(caso de teste \351 formado de v\341rias linhas. A primeira linha \351 formada por) N
+(dois n\372meros inteiros, M  e N, onde M indica o n\372mero  de \355tens na lista) N
+(de Sra.   Jones \(i <= M  <= 100\) e N  indica o n\372mero  total de produtos) N
+(dispon\355veis  no supermercado  \(1 <=  N <=  100.000\). A  segunda  linha \351) N
+(formada por M n\372meros inteiros, representando a lista de compras. E as N) N
+(linhas  seguintes, representando os  produtos dispon\355veis,  s\343o formadas) N
+(por um  inteiro K e um  real P, onde  K \351 o n\372mero  de um produto e  P o) N
+(pre\347o deste produto. O fim da entrada \351 por M = N = 0.) N
+() N
+(Sa\355da:) N
+() N
+(Para cada  caso de teste voc\352 deve  gerar uma linha na  sa\355da contendo o) N
+(custo  m\355nimo que  o  SR.  Jones  deve  pagar.  Caso  n\343o seja  poss\355vel) N
+(comprar   toda  a   lista,  imprima   no  lugar   do  custo   a  palavra) N
+("Impossible". O  custo deve  ser impresso como  um n\372mero real  com duas) N
+(casas decimais \(o \372ltimo d\355gito arredondado\).) N
+() N
+() N
+(mini_maratona_UFPR_UDESC_2008.txt) (Page 3/6) (May 09, 08 9:09) title
+border
+/v 1 store
+/x0 x v get 3.362408 add sx cw mul add store
+/y0 y v get bfs th add sub store
+x0 y0 moveto
+(Exemplo:) p n
+() N
+(entrada) N
+(4 8) N
+(1 1 2 20) N
+(2 0.29) N
+(1 0.30) N
+(20 0.15) N
+(1 1.00) N
+(5 0.05) N
+(2 10.00) N
+(20 20.00) N
+(20 10.00) N
+(2 5) N
+(1 2) N
+(3 1.00) N
+(4 1.00) N
+(2 0.01) N
+(1 1.00) N
+(2 1.50) N
+(2 3) N
+(1 2) N
+(2 0.05) N
+(1 10.00) N
+(1 3.00) N
+(0 0) N
+() N
+(sa\355da) N
+(21.30) N
+(2.50) N
+(Impossible) N
+() N
+(mini_maratona_UFPR_UDESC_2008.txt) (Page 4/6) (May 09, 08 9:09) title
+border
+grestore
+(Printed by Andre Guedes) rhead
+(mini_maratona_UFPR_UDESC_2008.txt) (2/3) (Friday May 09, 2008) footer
+end % of iso1dict
+pagesave restore
+showpage
+%%Page: (5-6) 3
+%%BeginPageSetup
+/pagesave save def
+sh 0 translate 90 rotate
+%%EndPageSetup
+iso1dict begin
+gsave
+llx lly 12 add translate
+/v 0 store
+/x0 x v get 3.362408 add sx cw mul add store
+/y0 y v get bfs th add sub store
+x0 y0 moveto
+(Problema D - Jack Compulsivo) p n
+(basename: jack) N
+() N
+(Jack Compulsivo \351 um homem  com muitos problemas. Ele n\343o consegue viver) N
+(sem  ter sua vida  organizada nos  m\355nimos detalhes  de acordo  com suas) N
+(manias. Uma  de suas manias  \351 ter os  cabides de roupas em  seu arm\341rio) N
+(sempre em uma determinada ordem. Nesta ordem, bastante simples, todas as) N
+(roupas  j\341 usadas  devem  estar sempre  a  esquerda de  todas as  roupas) N
+(novas. Entretanto, enquanto ele trabalhava, sua diarista, Maria Limpeza,) N
+(arrumou o  seu arm\341rio e trocou  todas as roupas de  lugar.  Quando Jack) N
+(chegou quase teve um colapso.) N
+() N
+(Para evitar ter que fazer  tirar e colocar muitos cabides, Jack pretende) N
+(arrumar tudo fazendo  algumas trocas de 2 cabides por  vez.  Ele pediu a) N
+(sua ajuda para fazer um programa  para determinar qual o menor n\372mero de) N
+(trocas que \351 necess\341rio para deixar o \341rm\341rio como ele quer. O n\372mero de) N
+(cabides no arm\341rio \351 no m\341ximo 10.000.) N
+() N
+(Entrada:) N
+() N
+(A entrada \351 composta de v\341rios casos  de teste. Cada caso de teste \351 uma) N
+(linha com '0's  e '1's \(sem espa\347os\) onde os  '0's representam as roupas) N
+(j\341 usadas e os '1's, as roupas novas.) N
+() N
+(Sa\355da:) N
+() N
+(A sa\355da  para cada  caso de  teste \351 uma  linha com  o n\372mero  m\355nimo de) N
+(trocas necess\341rio para se fazer a arruma\347\343o.) N
+() N
+(Exemplo:) N
+() N
+(entrada) N
+(00101001001) N
+(100000000111111111110) N
+(0000100011010111101) N
+() N
+(sa\355da) N
+(2) N
+(1) N
+(3) N
+() N
+(mini_maratona_UFPR_UDESC_2008.txt) (Page 5/6) (May 09, 08 9:09) title
+border
+/v 1 store
+/x0 x v get 3.362408 add sx cw mul add store
+/y0 y v get bfs th add sub store
+x0 y0 moveto
+(Problema E - Mapa do tesouro) p n
+(basename: mapa) N
+() N
+(Um amigo  seu achou  um mapa antigo  que indica  o caminho a  um tesouro) N
+(perdido. O mapa \351 muito confuso e indica um caminho tortuoso para chegar) N
+(ao tesouro.  Voc\352s  n\343o tem muito tempo, pois  existe a possibilidade de) N
+(uma outra  c\363pia do  mapa ter sido  encontrada. Voc\352 precisa  ajudar seu) N
+(amigo simplificando  o caminho  tortuoso para que  fique mais  curto. As) N
+(descri\347\365es do mapa falam em passos em cada uma das 4 dire\347\365es dos pontos) N
+(cardeais \(norte, sul, leste e oeste\). ) N
+() N
+(Entrada:) N
+() N
+(A entrada \351 composta de diversas linhas, onde cada linha \351 um caminho no) N
+(mapa, descrito como  uma seq\374\352ncia de letras \(sem  espa\347os\) indicando as) N
+(quatro dire\347\365es \(N, S, L e O\). Cada letra representa um passo. Os passos) N
+(devem ser considerados  como sendo sempre do mesmo  tamanho. Suponha que) N
+(cada linha tem no m\341ximo 1000 letras.) N
+() N
+(Saida:) N
+() N
+(Para cada linha voc\352 deve gerar um sa\355da simplificada, dando prefer\352ncia) N
+(para as dire\347\365es norte  e sul, ou seja, se a resposta  poderia ser SL ou) N
+(LS, a sa\355da deve ser SL.) N
+() N
+(Exemplo:) N
+() N
+(entrada) N
+(NLLLLSOO) N
+(LNOSLS) N
+() N
+(sa\355da) N
+(LL) N
+(SL) N
+(mini_maratona_UFPR_UDESC_2008.txt) (Page 6/6) (May 09, 08 9:09) title
+border
+grestore
+(Printed by Andre Guedes) rhead
+(mini_maratona_UFPR_UDESC_2008.txt) (3/3) (Friday May 09, 2008) footer
+end % of iso1dict
+pagesave restore
+showpage
+
+%%Trailer
+end
+%%EOF
