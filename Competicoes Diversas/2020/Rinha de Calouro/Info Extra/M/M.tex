@@ -1,0 +1,42 @@
+\section{Problema M: MMM}
+\vspace{-0.52cm}
+\noindent \begin{verbatim}Arquivo: M.[c|cpp|java|py]                           Tempo limite: 1 s
+\end{verbatim}
+
+Juninho é um rapaz, digamos assim, gulosinho. Não somente por adorar resolver problemas que envolvem soluções $greedy$, mas também por adorar MMM's (Migalhas Mega Maravilhosas). \\
+Apesar de guloso, Juninho é extremamente preocupado com sua dieta. Para isso precisa de sua ajuda para desenvolver um algoritmo o ajude a acompanhar como anda seu consumo de MMM's. \\
+
+O algoritmo tem como objetivo informar quantos MMM's Juninho anda comendo em média por dia e qual é o sabor de MMM que Juninho mais gosta.
+
+\subsection*{Entrada}
+
+A primeira linha consiste de dois inteiros $S$ e $D$ que representam, respectivamente, a quantidade de sabores diferentes de MMM's e a quantidade de dias. \\
+As próximas $D$ linhas contém $S$ inteiros. Sendo $X_i$ a quantidade de MMM's do sabor $i$ consumida naquele dia.
+
+\subsection*{Restrições}
+\begin{itemize}
+    \item $1 \le S,D \le 10^{3}$.
+    \item $0 \le X_i \le 100$.
+    \item $1 \le i \le S$.
+\end{itemize}
+
+\subsection*{Saída}
+
+Você deverá imprimir duas linhas. A primeira linha informa quantos MMM's Juninho anda comendo em média por dia (Juninho só come MMM's inteiras) e a segunda linha informa qual seu sabor preferido (é garantido que ele sempre terá um preferido).
+
+\begin{flushleft}
+\begin{tabularx}{1.01\textwidth}{ | p{6cm} | p{10cm} | }
+\hline
+\textbf{Exemplo de Entrada} & \textbf{Exemplo de Saída} \\
+\verbatiminput{./M/sample_1.in}
+&
+\verbatiminput{./M/sample_1.out}
+\\
+\hline
+\verbatiminput{./M/sample_2.in}
+&
+\verbatiminput{./M/sample_2.out}
+\\
+\hline
+\end{tabularx}
+\end{flushleft}

@@ -1,0 +1,37 @@
+\section{Problema K: Primos da Kaqui}
+\vspace{-0.52cm}
+\noindent \begin{verbatim}Arquivo: K.[c|cpp|java|py]                           Tempo limite: 1 s
+\end{verbatim}
+
+Kaqui é professora de MDI (Mágica dos Inteiros) e gosta muito de números primos, e quanto maior o número melhor pra ela. Por isso, para não ter que pedir para a monitora contar os dígitos dos números, ela pediu a sua ajuda. \\ Você deve fazer um programa que, dado uma lista de números, imprima quantos dígitos ele tem caso ele seja um primo. Caso o número dado não for primo, você deve avisar para Kaqui imprimindo "ei Kaqui, esse numero nao eh primo".
+
+\subsection*{Entrada}
+
+A primeira linha de entrada contém um inteiro $N$ indicando quantos números virão em seguida e as próximas $N$ linhas conterão um número $K$ para ser analisado.
+
+\subsection*{Restrições}
+\begin{itemize}
+    \item $1 \le N \le 80$.
+    \item $2 \le K \le 10^{12}$.
+\end{itemize}
+
+\subsection*{Saída}
+
+Você deve imprimir, para cada número $K$, a quantidade de dígitos que ele tem caso $K$ for primo, e caso não for deverá ser impressos "ei Kaqui, esse numero nao eh primo" sem aspas.
+
+\begin{flushleft}
+\begin{tabularx}{1.01\textwidth}{ | p{6cm} | p{10cm} | }
+\hline
+\textbf{Exemplo de Entrada} & \textbf{Exemplo de Saída} \\
+\verbatiminput{./K/sample_1.in}
+&
+\verbatiminput{./K/sample_1.out}
+\\
+\hline
+\verbatiminput{./K/sample_2.in}
+&
+\verbatiminput{./K/sample_2.out}
+\\
+\hline
+\end{tabularx}
+\end{flushleft}

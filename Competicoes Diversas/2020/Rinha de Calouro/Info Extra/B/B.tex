@@ -1,0 +1,41 @@
+\section{Problema B: Super Feijões}
+\vspace{-0.52cm}
+\noindent \begin{verbatim}Arquivo: B.[c|cpp|java|py]                           Tempo limite: 1 s
+\end{verbatim}
+
+Omar é fã de shows de mágica, ele já foi em tantos que conhece todos os truques. Porém ele sempre se perde quando o mágico resolve fazer o truque dos feijões, no qual ele coloca um feijão embaixo de um dos quatro copos e os embaralha para perguntar à plateia onde o feijão foi parar. \\
+
+Por isso ele resolveu pedir sua ajuda pra criar um programa que dado a posição inicial do feijão e todas as trocas realizadas, diga em qual copo o feijão está no final do truque. \\
+
+\subsection*{Entrada}
+
+Na primeira linha seguirão quatro inteiros, $C1$, $C2$, $C3$ e $C4$ separados por um espaço. O valor $Ci=1$ indica que o feijão estava no copo na posição $i$, e $Ci=0$ indica que o $i$-ésimo copo esta vazio. \\
+Em seguida, segue um número $N$, o número de trocas realizadas. As próximas $N$ linhas contêm dois inteiros $i, j$, representando que o $i$-ésimo copo foi trocado de lugar com o $j$-ésimo copo. \\
+Haverá sempre exatamente um copo com o feijão. \\
+
+\subsection*{Restrições}
+\begin{itemize}
+    \item $1 \le N \le 10^5$
+    \item $1 \le i, j \le 4$
+\end{itemize}
+
+\subsection*{Saída}
+
+Baseando-se nas trocas feitas, imprima um número $i$, indicando que ao final das trocas o feijão estará no $i$-ésimo copo. \\
+
+\begin{flushleft}
+\begin{tabularx}{1.01\textwidth}{ | p{6cm} | p{10cm} | }
+\hline
+\textbf{Exemplo de Entrada} & \textbf{Exemplo de Saída} \\
+\verbatiminput{./M/sample_1.in}
+&
+\verbatiminput{./M/sample_1.out}
+\\
+\hline
+\verbatiminput{./M/sample_2.in}
+&
+\verbatiminput{./M/sample_2.out}
+\\
+\hline
+\end{tabularx}
+\end{flushleft}
